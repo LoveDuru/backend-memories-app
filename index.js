@@ -18,7 +18,7 @@ app.use(express.json({ limit: "30mb" }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 
 app.use("/posts", postRoutes);
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const CONNECTION_URL = process.env.MONGO_URI;
 
